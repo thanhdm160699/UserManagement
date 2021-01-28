@@ -8,14 +8,15 @@ class AddUser extends Component {
     };
   }
 
-  hideFormAddUser = (status) => {
-    if (status === true)
+  hideButtonCloseAdd = () => {
+    if (this.state.status === true)
       return (
         <button
+          onClick={() => this.changeStatus()}
           type="button"
           name=""
           id=""
-          class="btn btn-primary btn-lg btn-block"
+          className="btn btn-primary btn-lg btn-block mb-4"
         >
           Close
         </button>
@@ -23,19 +24,26 @@ class AddUser extends Component {
     else
       return (
         <button
+          onClick={() => this.changeStatus()}
           type="button"
           name=""
           id=""
-          class="btn btn-primary btn-lg btn-block"
+          className="btn btn-primary btn-lg btn-block mb-4"
         >
           Add User
         </button>
       );
   };
 
-  render() {
-    return (
-      <div className="col-3">
+  changeStatus = () => {
+    this.setState({
+      status: !this.state.status,
+    });
+  };
+
+  hideFormAddUser = () => {
+    if (this.state.status === true) {
+      return (
         <div className="card">
           <div className="card-body">
             <div className="form-group">
@@ -69,6 +77,15 @@ class AddUser extends Component {
             </button>
           </div>
         </div>
+      );
+    }
+  };
+
+  render() {
+    return (
+      <div className="col-3">
+        {this.hideButtonCloseAdd()}
+        {this.hideFormAddUser()}
       </div>
     );
   }
