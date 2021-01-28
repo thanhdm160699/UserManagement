@@ -1,0 +1,17 @@
+.custom-search{
+    width: 35%;
+}
+
+input.form-control.me-2 {
+    margin-right: 3%;
+}
+
+td{
+    vertical-align: baseline !important;
+}
+
+.col-9-custom{
+    padding-left: 0%;
+    padding-right: 0%;
+    
+}
