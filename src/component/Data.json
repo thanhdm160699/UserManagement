@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 1,
+        "phone"  : "0905023484",
+        "role" : "admin",
+        "name" : "Dang Minh Thanh"
+    },
+    {
+        "id" : 2,
+        "phone"  : "0907023723",
+        "role" : "mod",
+        "name" : "Vo Khoi Tuan Anh"
+    },
+    {
+        "id" : 3,
+        "phone"  : "0903023677",
+        "role" : "normal",
+        "name" : "Dang Minh Tuan"
+    },
+    {
+        "id" : 4,
+        "phone"  : "0905023568",
+        "role" : "normal",
+        "name" : "Vo Manh Dung"
+    },
+    {
+        "id" : 5,
+        "phone"  : "0906783484",
+        "role" : "mod",
+        "name" : "Le Viet Minh Khanh"
+    }
+]

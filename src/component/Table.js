@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import RowTable from "./RowTable";
 
 class Table extends Component {
   render() {
@@ -15,134 +16,9 @@ class Table extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td  >1</td>
-              <td>Dang Minh Thanh</td>
-              <td>0905923585</td>
-              <td>Admin</td>
-              <td>
-                <button className="btn btn-warning" type="button">
-                  <i className="fa fa-edit ">Update</i>
-                </button>
-                <button className="btn btn-danger" type="button">
-                  <i className="fa fa-recycle" aria-hidden="true">
-                    Delete
-                  </i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td >1</td>
-              <td>Dang Minh Thanh</td>
-              <td>0905923585</td>
-              <td>Admin</td>
-              <td>
-                <button className="btn btn-warning" type="button">
-                  <i className="fa fa-edit ">Update</i>
-                </button>
-                <button className="btn btn-danger" type="button">
-                  <i className="fa fa-recycle" aria-hidden="true">
-                    Delete
-                  </i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td  >1</td>
-              <td>Dang Minh Thanh</td>
-              <td>0905923585</td>
-              <td>Admin</td>
-              <td>
-                <button className="btn btn-warning" type="button">
-                  <i className="fa fa-edit ">Update</i>
-                </button>
-                <button className="btn btn-danger" type="button">
-                  <i className="fa fa-recycle" aria-hidden="true">
-                    Delete
-                  </i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td  >1</td>
-              <td>Dang Minh Thanh</td>
-              <td>0905923585</td>
-              <td>Admin</td>
-              <td>
-                <button className="btn btn-warning" type="button">
-                  <i className="fa fa-edit ">Update</i>
-                </button>
-                <button className="btn btn-danger" type="button">
-                  <i className="fa fa-recycle" aria-hidden="true">
-                    Delete
-                  </i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td  >1</td>
-              <td>Dang Minh Thanh</td>
-              <td>0905923585</td>
-              <td>Admin</td>
-              <td>
-                <button className="btn btn-warning" type="button">
-                  <i className="fa fa-edit ">Update</i>
-                </button>
-                <button className="btn btn-danger" type="button">
-                  <i className="fa fa-recycle" aria-hidden="true">
-                    Delete
-                  </i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td  >1</td>
-              <td>Dang Minh Thanh</td>
-              <td>0905923585</td>
-              <td>Admin</td>
-              <td>
-                <button className="btn btn-warning" type="button">
-                  <i className="fa fa-edit ">Update</i>
-                </button>
-                <button className="btn btn-danger" type="button">
-                  <i className="fa fa-recycle" aria-hidden="true">
-                    Delete
-                  </i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td  >1</td>
-              <td>Dang Minh Thanh</td>
-              <td>0905923585</td>
-              <td>Admin</td>
-              <td>
-                <button className="btn btn-warning" type="button">
-                  <i className="fa fa-edit ">Update</i>
-                </button>
-                <button className="btn btn-danger" type="button">
-                  <i className="fa fa-recycle" aria-hidden="true">
-                    Delete
-                  </i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td  >1</td>
-              <td>Dang Minh Thanh</td>
-              <td>0905923585</td>
-              <td>Admin</td>
-              <td>
-                <button className="btn btn-warning" type="button">
-                  <i className="fa fa-edit ">Update</i>
-                </button>
-                <button className="btn btn-danger" type="button">
-                  <i className="fa fa-recycle" aria-hidden="true">
-                    Delete
-                  </i>
-                </button>
-              </td>
-            </tr>
+            {
+                  this.props.data.map((value,key) => <RowTable key={key} id = {value.id} name={value.name} phone={value.phone} role={value.role}></RowTable>)
+            }
           </tbody>
         </table>
       </div>

@@ -4,12 +4,13 @@ import AddUser from "./component/AddUser";
 import Header from "./component/Header";
 import Search from "./component/Search";
 import Table from "./component/Table";
-
+import Data from "./component/Data.json";
 class App extends Component {
   constructor(props) {
     super(props);
       this.state = {
         statusForm: false,
+        Data : Data
       };
   }
 
@@ -30,7 +31,7 @@ class App extends Component {
             <Search changeStatus = {() => this.changeStatus()} statusForm ={this.state.statusForm}></Search>
           </div>
           <div className="row mt-4">
-            <Table ></Table>
+            <Table data = {this.state.Data}></Table>
             <AddUser statusForm={this.state.statusForm}></AddUser>
           </div>
         </div>
