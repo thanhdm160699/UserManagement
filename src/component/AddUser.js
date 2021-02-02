@@ -1,49 +1,10 @@
 import React, { Component } from "react";
 
 class AddUser extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      status: true,
-    };
-  }
 
-  hideButtonCloseAdd = () => {
-    if (this.state.status === true)
-      return (
-        <button
-          onClick={() => this.changeStatus()}
-          type="button"
-          name=""
-          id=""
-          className="btn btn-primary btn-lg btn-block mb-4"
-        >
-          Close
-        </button>
-      );
-    else
-      return (
-        <button
-          onClick={() => this.changeStatus()}
-          type="button"
-          name=""
-          id=""
-          className="btn btn-primary btn-lg btn-block mb-4"
-        >
-          Add User
-        </button>
-      );
-  };
-
-  changeStatus = () => {
-    this.setState({
-      status: !this.state.status,
-    });
-  };
-
-  hideFormAddUser = () => {
-    if (this.state.status === true) {
-      return (
+  hideFormAddUser = () =>{
+    if(this.props.statusForm === true){
+      return(
         <div className="card">
           <div className="card-body">
             <div className="form-group">
@@ -77,14 +38,14 @@ class AddUser extends Component {
             </button>
           </div>
         </div>
-      );
+      )
     }
-  };
+  }
 
   render() {
+    console.log(this.props.statusForm);
     return (
       <div className="col-3">
-        {this.hideButtonCloseAdd()}
         {this.hideFormAddUser()}
       </div>
     );
