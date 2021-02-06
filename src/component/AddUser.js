@@ -5,6 +5,7 @@ class AddUser extends Component {
   hideFormAddUser = () =>{
     if(this.props.statusForm === true){
       return(
+        <div className="col">
         <div className="card">
           <div className="card-body">
             <div className="form-group">
@@ -15,7 +16,7 @@ class AddUser extends Component {
                 placeholder="Name"
                 aria-describedby="helpId"
               />
-              <hr />
+              <hr/>
               <input
                 type="text"
                 name="##"
@@ -38,15 +39,15 @@ class AddUser extends Component {
             </button>
           </div>
         </div>
+        </div>
       )
     }
   }
 
   render() {
-    console.log(this.props.statusForm);
     return (
-      <div className="col-3">
-        {this.hideFormAddUser()}
+      <div>
+      {this.hideFormAddUser()}
       </div>
     );
   }
